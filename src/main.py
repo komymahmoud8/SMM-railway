@@ -11,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from ExampleAgency.agency import agency
+from SMM_2.agency import agency
 from utils.demo_gradio_override import demo_gradio_override
 
 APP_TOKEN = os.getenv("APP_TOKEN")
@@ -98,4 +98,4 @@ async def exception_handler(request, exc):
 
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
